@@ -1,6 +1,7 @@
 #include "register.h"
 #include "ui_register.h"
 #include "checksite.h"
+#include "license.h"
 #include "registered.h"
 
 Register::Register(QWidget *parent) :
@@ -50,5 +51,8 @@ void Register::on_pushButton_clicked()
 void Register::on_license_clicked()
 {
     //open the license file and process
+    License *lic = new License();
+    this->hide();
+    lic->show();
 
 }
